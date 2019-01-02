@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <title>Documentation page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="menu" onclick="openNav()">
+                &#9776;
+                <span>Menu</span>
+            </div>
+            <div class="logo">
+                LIQUID
+            </div>
+        </header>
+    
+        <nav class="nav">
+            <h3>LIQUID</h3>
+            <hr>
+            <h4>Introduction</h4>
+            <a href="#introduction" class="nav-link">Introduction</a>
+            <a href="#tags" class="nav-link">Tags</a>
+            <a href="#objects" class="nav-link">Objects</a>
+            <a href="#filters" class="nav-link">Filters</a>
+            <a href="#conclution" class="nav-link">Conclution</a>
+        </nav>
+
+    
+        <main class="main" id="mian-doc">
+            <section class="main-section" id="introduction">
+                <h3>Introduction</h3>
+                <p>
+                    Lorem, ipsum dolor am nihil iste <strong class="keyword">object</strong>, <strong class="keyword">tags</strong> and <strong class="keyword">filters</strong> laborum velit iusto, magnam mollitia!
+                </p>
+            </section>
+    
+            <section class="main-section" id="objects">
+                <h3>Objects</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui doloremque magnam enim libero adipisci  impedit, laudantium dicta ducimus optio assumenda <strong class="highlight">{{</strong> and <strong class="highlight">}}</strong>
+                </p>
+    
+                <div class="input">
+                    <span class="input-heading">Input</span>
+                    <p class="input-content"> 
+                        <pre><code>{{ page.title }}</code></pre>
+                    </p>
+                </div>
+    
+                <div class="output">
+                    <span class="output-heading">Input</span>
+                    <p class="output-content"> 
+                     Introduction
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="main-section" id="tags">
+                <h3>Tags</h3>
+                <p>
+                    Tags create the logic and control flow for templates. they are denoted by curly braces and percent signs: <code>{%</code> and <code>%}</code>
+                </p>
+
+                <p>
+                    The markup used in the tags does not produce any visible text. This means that you can assign variables and create conditions and loops without showing any of the liquid logic on the page.
+                </p>
+    
+                <div class="input">
+                    <span class="input-heading">Input</span><p class="input-content"> 
+<pre><code>{% if user %}</code>
+ <code>Hello {{ user.name }}</code>
+<code>{% endif %}</code></pre>
+                    </p>
+                </div>
+    
+                <div class="output">
+                    <span class="output-heading">Input</span>
+                    <p class="output-content"> 
+                     Hello Adam!
+                    </p>
+                </div>
+
+                <p>
+                    Tags can be categorize into three types:
+                </p>
+
+                <ul>
+                    <li><a href="">Control flow</a></li>
+                    <li><a href="">Iteration</a></li>
+                    <li><a href="">Variable assignments</a></li>
+                </ul>
+
+                <p>
+                    You can read more about each type of tags in their respective sections.
+                </p>
+            </section>
+
+            <section class="main-section" id="filters">
+                    <h3>Filters</h3>
+                    <p>
+                        Filters change the output of a Liquid object. They are used within an output and are separated bay a |
+                    </p>
+        
+                    <div class="input">
+                        <span class="input-heading">Input</span>
+                        <p class="input-content"> 
+                            <pre><code>{{ "/my/fancy/url | append: ".html" }}</code></pre>
+                        </p>
+                    </div>
+
+                    <div class="output">
+                            <span class="output-heading">Input</span>
+                            <p class="output-content"> 
+                             /my/fancy/url.html
+                            </p>
+                    </div>
+
+                    <p>
+                        Multiple filters can be used on one output.They are applied from left to right.
+                    </p>
+
+                    <div class="input">
+                            <span class="input-heading">Input</span>
+                            <p class="input-content"> 
+                                <pre><code>{{ "adama!" | capitalize | prepend: "Hello " }}</code></pre>
+                            </p>
+                        </div>
+    
+                        <div class="output">
+                                <span class="output-heading">Input</span>
+                                <p class="output-content"> 
+                                  Hello Adama!
+                                </p>
+                        </div>
+
+            </section>
+
+            <section class="main-section" id ="conclution">
+                    <h3>Conclution</h3>
+                    <p>
+                        Lorem, ipsum dolor am nihil iste <strong class="keyword">object</strong>, <strong class="keyword">tags</strong> and <strong class="keyword">filters</strong> laborum velit iusto, magnam mollitia! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem sequi accusantium delectus vel deleniti esse, quod a tempore qui debitis? Ab corporis officia molestias culpa corrupti necessitatibus deleniti, reiciendis assumenda.
+                    </p>
+            </section>
+
+
+        </main>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
